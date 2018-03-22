@@ -94,7 +94,7 @@ fn main() {
     let provider = DefaultCredentialsProvider::new(None).unwrap();
 
     // V4 is the default signature for AWS. However, other systems also use V2.
-    let endpoint = Endpoint::new(Region::UsEast1, Signature::V4, None, None, None);
+    let endpoint = Endpoint::new(Region::UsEast1, Signature::V4, None, None, None, None);
     let client = S3Client::new(provider, endpoint);
 
     match client.list_buckets() {
